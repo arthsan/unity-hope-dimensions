@@ -14,20 +14,20 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 100
+  m_LinearFogEnd: 500
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 4.22
+  m_AmbientIntensity: 2.67
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
-  m_HaloStrength: 0.5
+  m_SkyboxMaterial: {fileID: 2100000, guid: e980bc7fbb00dc34b86b95ac842d1920, type: 2}
+  m_HaloStrength: 0.682
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.46380925, g: 0.54003924, b: 0.8270188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -162,6 +162,50 @@ Transform:
   m_Father: {fileID: 1252587472}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &170023156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1754910023302818, guid: 60f26d6465b822444ab5dadf5986bb35,
+    type: 3}
+  m_PrefabInstance: {fileID: 867139072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &170023157
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170023156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &170023158
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170023156}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 05485a1f3bce1124597a43b27ed52f0c, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -1120062851716841528, guid: 05485a1f3bce1124597a43b27ed52f0c, type: 2}
+    value: {fileID: 170023157}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &173618235
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +437,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1754910023302818, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_Name
-      value: Ship_05 (1)
+      value: Bulk
       objectReference: {fileID: 0}
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -438,6 +482,18 @@ PrefabInstance:
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6687843770893698845, guid: 60f26d6465b822444ab5dadf5986bb35,
         type: 3}
@@ -524,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.0071595344, y: 0.8402327, z: -0.011109702, w: 0.5420649}
-  m_LocalPosition: {x: 504, y: 24.83542, z: 36.640373}
+  m_LocalPosition: {x: 0, y: 24.83542, z: 36.640373}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1208401993}
@@ -1078,9 +1134,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1208401996, guid: 7861019a7b8cb6f4db5310695263b29a, type: 3}
+      propertyPath: guns.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208401996, guid: 7861019a7b8cb6f4db5310695263b29a, type: 3}
       propertyPath: xRange
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1208401996, guid: 7861019a7b8cb6f4db5310695263b29a, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 1868633063}
     - target: {fileID: 840807243, guid: 7861019a7b8cb6f4db5310695263b29a, type: 3}
       propertyPath: deathFX
       value: 
@@ -1379,6 +1443,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1868633063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786343843, guid: 7861019a7b8cb6f4db5310695263b29a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1603800040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956107292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1558,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 683424233774501441, guid: a61f09317bb54144dabbe32b15edec0b,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1.04e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 683424233774501441, guid: a61f09317bb54144dabbe32b15edec0b,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.8e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 683424233774501441, guid: a61f09317bb54144dabbe32b15edec0b,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 8.96e-42
+      objectReference: {fileID: 0}
     - target: {fileID: 683424233774501442, guid: a61f09317bb54144dabbe32b15edec0b,
         type: 3}
       propertyPath: m_Name
