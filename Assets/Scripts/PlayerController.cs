@@ -4,31 +4,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    [Header("General")]
     [Tooltip("In ms^-1")][SerializeField] float xSpeed = 80f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 16f;
     [Tooltip("In m")] [SerializeField] float xRange = 20f;
     [Tooltip("In m")] [SerializeField] float yRange = 13f;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -1.5f;
+    [SerializeField] float positionYawFactor = 2.2f;
+
+    [Header("Control-throw Based")]
     [SerializeField] float controlPitchFactor = -20f;
-    [SerializeField] float positionYawFactor = -0.3f;
     [SerializeField] float controlRollFactor = -25f;
 
     float xThrow;
     float yThrow;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    public bool isAlive = true;
 
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isAlive)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
+
+    void OnPLayerDeath()
+    {
+        isAlive = !isAlive;
     }
 
     private void ProcessRotation()
